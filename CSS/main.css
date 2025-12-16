@@ -1,0 +1,11 @@
+.MyUp{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: aquamarine;
+}
+.Logo{
+    display: flex;
+    max-width: 35%;
+    padding-left: 2%;
+}

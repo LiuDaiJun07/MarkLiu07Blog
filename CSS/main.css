@@ -1,11 +1,37 @@
 .MyUp{
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
     flex-direction: row;
     background-color: aquamarine;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999999;
 }
 .Logo{
     display: flex;
     max-width: 35%;
     padding-left: 2%;
+}
+.VideoClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.VideoTitle{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 15%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.VideoButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
 }

@@ -9,37 +9,51 @@
     </head>
 
     <body>
-        <script src="JS/main.js"></script><!-- 引入JS文件  -->
-        <script src="JS/Bootstrap/bootstrap.bundle.min.js"></script><!-- 引入Bootstrap JS文件  -->
-        <div>
-            <nav class="navbar bg-dark MyUp" data-bs-theme="dark"><!--上侧导航栏-->
-            <div class=" Logo">
-                <a class="navbar-brand" href="index.html">
-                <img src="statics/Image/pack_icon.png" alt="Bootstrap" width="50" height="50">
-                </a>
+        <div><!--上侧导航栏-->
+            <nav class="navbar bg-dark MyUp" data-bs-theme="dark">
+                <div class=" Logo">
+                    <a class="navbar-brand" href="index.html">
+                    <img src="statics/Image/pack_icon.png" alt="Bootstrap" width="50" height="50">  Mark的博客
+                    </a>
+                </div>
+                <div>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">项目</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">关于</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="VideoClass"><!--首页视频-->
+            <video autoplay muted loop id="MainVideo">
+                <source src="statics/Image/MainVideo.mp4" type="video/mp4">
+            </video>
+            <div class="VideoTitle"><!--视频文字-->
+                <h1>欢迎来到MarkLiu07的博客</h1>
+                <p>这是一个记录学习与生活的个人博客网站</p>
+                <div class="VideoButton">
+                    <button type="button" class="btn btn-outline-light">了解更多</button>
+                </div>
             </div>
-            <div>
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">关于</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">文章</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">项目</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            
+            
         </div>
         
 
         <div>
             
         </div><!--主体-->
+        <script src="JS/main.js"></script><!-- 引入JS文件  -->
+        <script src="JS/Bootstrap/bootstrap.bundle.min.js"></script><!-- 引入Bootstrap JS文件  -->
     </body>
 </html>

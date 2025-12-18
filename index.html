@@ -9,79 +9,151 @@
     </head>
 
     <body>
-        <div><!--上侧导航栏-->
-            <nav class="navbar bg-dark MyUp" data-bs-theme="dark">
-                <div class=" Logo">
-                    <a class="navbar-brand" href="index.html">
-                    <img src="statics/Image/pack_icon.png" alt="Bootstrap" width="50" height="50">  Mark的博客
-                    </a>
+        <div>
+            <div><!--上侧导航栏-->
+                <nav class="navbar bg-dark MyUp" data-bs-theme="dark">
+                    <div class=" Logo">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="statics/Image/pack_icon.png" alt="Bootstrap" width="50" height="50">  Mark的博客
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">文章</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">项目</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">关于</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--分割线增加可读性-->
+            <div class="VideoClass"><!--首页视频-->
+                <video autoplay muted loop id="MainVideo">
+                    <source src="statics/Image/MainVideo.mp4" type="video/mp4">
+                </video>
+                <div class="VideoTitle"><!--视频文字-->
+                    <h1>欢迎来到MarkLiuCN07的博客</h1>
+                    <p>这是一个记录学习与生活的个人博客网站</p>
+                    <p id="hitokoto"><!--一言获取-->
+                        <p href="#" id="hitokoto_text">一言获取中...</p>
+                    </p>
+                    <div class="VideoButton">
+                        <button type="button" class="btn btn-outline-light">了解更多</button>
+                    </div>
                 </div>
+            </div>
+            <!--分割线增加可读性-->
+            <div class="MainContain"><!--卡片主体-->
+                <div><!--大标题-->
+                    <h1 class="ViceTitle">推荐</h1>
+                    <h1 class="LargeTitle">猜你想看：</h1>
+                </div>
+                <div class="CardClassContain"><!--卡片-->
+                    <div class="card cardMyClass">
+                        <img src="statics/Image/VIEWICON.jpg" class="card-img-top" alt="摄影作品">
+                        <div class="card-body">
+                            <h5 class="card-title">我的摄影作品</h5>
+                            <p class="card-text">摄影记录的不仅仅是美景，还是藏在时光褶皱里的生活。</p>
+                            <a href="#" class="btn btn-primary">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="card cardMyClass">
+                        <img src="statics/Image/CVICON.png" class="card-img-top" alt="简历">
+                        <div class="card-body">
+                            <h5 class="card-title">我的简历</h5>
+                            <p class="card-text">简历承载着我的经历与技能，也是给未来机遇的一封自荐信。</p>
+                            <a href="#" class="btn btn-primary">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="card cardMyClass">
+                        <img src="statics/Image/CODEICON.png" class="card-img-top" alt="开发项目">
+                        <div class="card-body">
+                            <h5 class="card-title">我的程序项目</h5>
+                            <p class="card-text">在键盘上敲出的不仅仅是代码和逻辑，还是天马行空的创意。</p>
+                            <a href="#" class="btn btn-primary">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--分割线增加可读性-->
+            <div class="NewPassage"><!--最新文章-->
                 <div>
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">首页</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">文章</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">项目</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">关于</a>
-                        </li>
-                    </ul>
+                    <h1 class="ViceTitle">最新</h1>
+                    <h1 class="LargeTitle">有趣文章：</h1>
                 </div>
-            </nav>
-        </div>
-        <div class="VideoClass"><!--首页视频-->
-            <video autoplay muted loop id="MainVideo">
-                <source src="statics/Image/MainVideo.mp4" type="video/mp4">
-            </video>
-            <div class="VideoTitle"><!--视频文字-->
-                <h1>欢迎来到MarkLiuCN07的博客</h1>
-                <p>这是一个记录学习与生活的个人博客网站</p>
-                <p id="hitokoto"><!--一言获取-->
-                    <p href="#" id="hitokoto_text">一言获取中...</p>
-                </p>
-                <div class="VideoButton">
-                    <button type="button" class="btn btn-outline-light">了解更多</button>
+                <div class="CardClassContain">
+                    <div class="card mb-3 myPassageCard">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">未命名</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">2025.12.18</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 myPassageCard">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">未命名</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">2025.12.18</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 myPassageCard">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">未命名</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">2025.12.18</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div><!--下方bar-->
+                <nav class="navbar bg-dark myDownBar" data-bs-theme="dark">
+                    <div class="container MyDownImg">
+                        <a class="navbar-brand" href="#">
+                            <img src="statics/Image/pack_icon.png" alt="MarkLiu" width="40" height="40">
+                        </a>
+                    </div>
+                    <div class="ICONToOther">
+                        <div class="LastIcon">
+                            <a href="https://space.bilibili.com/3632306923244262?spm_id_from=333.337.0.0">
+                                <img src="statics/Image/BIcon.png" alt="Bilibili" width="50" height="50" style="filter: invert(100%);">
+                            </a>
+                        </div>
+                        <div class="LastIcon">
+                            <a href="mailto:markliu07@outlook.com">
+                                <img src="statics/Image/EmailIcon.png" alt="Email" width="50" height="50" style="filter: invert(100%);">
+                            </a>
+                        </div>
+                        <div class="LastIcon">
+                            <a href="https://github.com/LiuDaiJun07">
+                                <img src="statics/Image/githubIcon.png" alt="Github" width="50" height="50" style="filter: invert(100%);">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
-        
-        <div class="MainContain">
-            <div><!--大标题-->
-                <h1 class="ViceTitle">推荐</h1>
-                <h1 class="LargeTitle">猜你想看：</h1>
-            </div>
-            <div class="CardClassContain">
-                <div class="card cardMyClass">
-                    <img src="statics/Image/VIEWICON.jpg" class="card-img-top" alt="摄影作品">
-                    <div class="card-body">
-                        <h5 class="card-title">我的摄影作品</h5>
-                        <p class="card-text">摄影记录的不仅仅是美景，还是藏在时光褶皱里的生活。</p>
-                        <a href="#" class="btn btn-primary">了解更多</a>
-                    </div>
-                </div>
-                <div class="card cardMyClass">
-                    <img src="statics/Image/CVICON.png" class="card-img-top" alt="简历">
-                    <div class="card-body">
-                        <h5 class="card-title">我的简历</h5>
-                        <p class="card-text">简历承载着我的经历与技能，也是给未来机遇的一封自荐信。</p>
-                        <a href="#" class="btn btn-primary">了解更多</a>
-                    </div>
-                </div>
-                <div class="card cardMyClass">
-                    <img src="statics/Image/CODEICON.png" class="card-img-top" alt="开发项目">
-                    <div class="card-body">
-                        <h5 class="card-title">我的程序项目</h5>
-                        <p class="card-text">在键盘上敲出的不仅仅是代码和逻辑，还是天马行空的创意。</p>
-                        <a href="#" class="btn btn-primary">了解更多</a>
-                    </div>
-                </div>
-            </div>
-        </div><!--主体-->
+        <!--分割线增加可读性-->
         <script src="JS/main.js"></script><!-- 引入JS文件  -->
         <script src="JS/Bootstrap/bootstrap.bundle.min.js"></script><!-- 引入Bootstrap JS文件  -->
     </body>

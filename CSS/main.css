@@ -110,7 +110,6 @@ html{
     flex-wrap: wrap;
     width: 100%;
     min-height: 350px;
-        border: red solid 2px;
 }
 .myDownBar{
     display: flex;
@@ -123,10 +122,15 @@ html{
 }
 .ICONToOther{
     display: flex;
+    flex-direction: row;
     justify-content: end;
     align-items: flex-end;
     gap: 20px;
 }
 .LastIcon{
     display: flex;
+}
+.MyDownImg{
+    display: flex;
+    width: 100%;
 }

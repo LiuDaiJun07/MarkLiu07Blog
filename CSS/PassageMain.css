@@ -1,0 +1,40 @@
+.ContentContain{
+    padding-top: 70px;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.PassageContain{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    gap: 10px;
+}
+.NormalPassage{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    align-items: center;
+    -ms-overflow-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.OtherPassage{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    align-items: center;
+    -ms-overflow-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,13 @@
+html{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.CVpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 700px;
+    padding-top: 120px;
+}

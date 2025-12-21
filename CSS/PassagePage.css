@@ -1,0 +1,71 @@
+/* 这里的css是model所包含的 */
+html{
+    scrollbar-width:auto!important;
+    -ms-overflow-style: auto!important;
+}
+.Pass-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.PassageMainContain{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: auto;
+}
+.MainLargeTitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+.MainContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.MainContainer{
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    padding-left: 5%;
+    flex-wrap: wrap;
+    min-height: 10px;
+}
+.MainFont{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    overflow-wrap: break-word;
+}
+p{
+    text-indent: 2em;
+}
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+.MainIMG{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.MainCode{
+    border: rgb(0, 0, 0) solid 1px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}

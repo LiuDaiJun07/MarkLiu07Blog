@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>文章详情 - MarkLiu07的博客</title><!--博客标题 -->
+        <link rel="shortcut icon" href="../../statics/Image/icon.ico" type="image/x-icon"><!-- 网站图标  -->
+        <link rel="stylesheet" href="../../CSS/Bootstrap/bootstrap.min.css"><!-- 引入Bootstrap CSS文件  -->
+        <link rel="stylesheet" type="text/css" href="../../CSS/main.css"><!-- 引入核心CSS文件  -->
+        <link rel="stylesheet" type="text/css" href="../../CSS/PassagePage.css"><!-- 引入照片页CSS文件  -->
+    </head>
+
+    <body>
+        <div>
+            <div><!--上侧导航栏-->
+                <nav class="navbar bg-dark MyUp" data-bs-theme="dark">
+                    <div class="Logo">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../../statics/Image/pack_icon.png" alt="Bootstrap" width="50" height="50">  Mark的博客
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../Pages/Passage.html">文章</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../Pages/Program.html">项目</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../Pages/CV.html">关于</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--分割线增加可读性-->
+            <div class="Pass-container">
+                <div class="PassageMainContain">
+                    <div class="MainLargeTitle">
+                        <h1 style="font-weight: bold;">Unity教程：扇形判断</h1>
+                        <h4 style="color: gray; padding-top: 1%;">2025.12.19</h4>
+                    </div>
+                    <div class="MainContent">
+                        <div class="MainContainer">
+                            <p class="MainFont">本文将会向你介绍一种扇形判断的方法，这种方法将会用于实体检测，假设你的玩家拥有一把近战武器，并且想要去使用近战武器攻击敌人，此时你需要考虑到扇形判断。</p>
+                            <div class="MainIMG">
+                                <img src="../../statics/Image/PassageImage/UnitySectorDetection/1.png" alt="Example" class="img-responsive">
+                            </div>
+                            <p class="MainFont">本教程具体给你讲述算法实现，而不是直接套用的模板，如果你需要一个模板，请等我完成整个游戏之后检查我的GitHub主页，随缘更新，主要是完成整个作品难度有些高。：）</p>
+                            <p class="MainFont">在写代码之前，我们思考一下你高中所学的内容，cos夹角等于向量相乘/向量的模相乘，所以我们可以通过两条向量求出夹角，以此与我们事先定义好的范围做出对比，如果符合我们的数值，那么攻击有效，否则攻击无效。听上去很简单吧，接下来我们进行实战。</p>
+                            <div class="MainCode">
+                                <h4>C#代码块</h4>
+                                <pre>
+                                    <code>
+1| public float Attack_R;//设置攻击的半径：R
+2| public float AttackAngle;//设置临界角度
+                                    </code>
+                                </pre>
+                            </div>
+                            <p class="MainFont">这部分很简单，我们需要设置一个半径和角度去确定敌人是否在范围之内。</p>
+                            <p class="MainFont">接下来我们需要先获取所有在半径内的敌人，然后再去判断是否在角度范围内，因此接下来我会定义一个HurtEnemy方法，在这里面会去判断敌人是否在半径和角度范围内，同时我会定义一个GetTwoAngle方法，获取二者角度（指的是玩家鼠标位置到敌人之间的夹角）</p>
+                            <div class="MainCode">
+                                <h4>C#代码块</h4>
+                                <pre>
+                                    <code>
+1| void HurtEmey()
+2| {
+3|    Collider2D[] colliders = Physics2D.OverlapCircleAll(PlayerScript.PlayerTran.position,Attack_R,targetLayers);//获取在半径内的实体
+4|   foreach(Collider2D emeHit in colliders)//遍历所有在范围的对象
+5|    {
+6|        float CurrAngle = GetTwoAngle(emeHit.transform.position);//获取在角度范围内的实体
+7|        if (CurrAngle <= AttackAngle / 2f)//如果小于目标角度的一半，那么判断成功
+8|        {
+9|            //攻击成功
+10|        }
+11|    }
+12| }
+                                    </code>
+                                </pre>
+                            </div>
+                            <p class="MainFont">这里我们使用了Physics2D.OverlapCircleAll方法去获取在半径内的所有实体，然后通过foreach循环去遍历这些实体，接着调用GetTwoAngle方法获取玩家与敌人之间的夹角，最后进行判断，如果小于我们定义好的角度的一半，那么攻击成功。</p>
+                            <div class="MainCode">
+                                <h4>C#代码块</h4>
+                                <pre>
+                                    <code>
+1| public float GetTwoAngle(Vector3 positionB)//计算角色到敌人之间的夹角
+2|    {
+3|        float angle;
+4|        Vector2 mouseDir = (PlayerScript.mousePosition - PlayerScript.PlayerTran.position).normalized;//以玩家作为中心点，获取鼠标方向的向量
+5|        Vector2 dir = (positionB - PlayerScript.PlayerTran.position).normalized;//获取玩家到敌人的方向向量
+6|        angle = Vector2.Angle(mouseDir,dir);//计算二者夹角
+7|        return angle;
+8|    }
+                                    </code>
+                                </pre>
+                            </div>
+                            <p class="MainFont">这里我们定义了一个GetTwoAngle方法，传入敌人的位置，然后获取玩家到鼠标的方向向量和玩家到敌人的方向向量，最后通过Vector2.Angle方法获取二者夹角并返回。</p>
+                            <p class="MainFont">好了，以上就是本文的全部内容，希望对你有所帮助，祝你编程愉快！：）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--分割线增加可读性-->
+            <div><!--下方bar-->
+                <nav class="navbar bg-dark myDownBar" data-bs-theme="dark">
+                    <div class="container MyDownImg">
+                        <a class="navbar-brand" href="#">
+                            <img src="../../statics/Image/pack_icon.png" alt="MarkLiu" width="40" height="40">
+                        </a>
+                        <div class="ICONToOther">
+                            <div class="LastIcon">
+                                <a href="https://space.bilibili.com/3632306923244262?spm_id_from=333.337.0.0">
+                                    <img src="../../statics/Image/BIcon.png" alt="Bilibili" width="50" height="50" style="filter: invert(100%);">
+                                </a>
+                            </div>
+                            <div class="LastIcon">
+                                <a href="mailto:markliu07@outlook.com">
+                                    <img src="../../statics/Image/EmailIcon.png" alt="Email" width="50" height="50" style="filter: invert(100%);">
+                                </a>
+                            </div>
+                            <div class="LastIcon">
+                                <a href="https://github.com/LiuDaiJun07">
+                                    <img src="../../statics/Image/githubIcon.png" alt="Github" width="50" height="50" style="filter: invert(100%);">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--分割线增加可读性-->
+        <script src="../JS/main.js"></script><!-- 引入JS文件  -->
+        <script src="../JS/Bootstrap/bootstrap.bundle.min.js"></script><!-- 引入Bootstrap JS文件  -->
+    </body>
+</html>

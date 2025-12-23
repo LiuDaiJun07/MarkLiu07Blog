@@ -53,7 +53,6 @@ git clone https://github.com/LiuDaiJun07/MarkLiu07Blog.git
 ```
 **文本内容的修改**
 
-注意：本方法有缺陷，我建议您使用插件！本方法需要手动添加行数！
 ```html
 <p class="MainFont">这是文章的正文部分。在这里，你可以添加你的内容</p>
 ```
@@ -65,6 +64,8 @@ git clone https://github.com/LiuDaiJun07/MarkLiu07Blog.git
 </div>
 ```
 **代码块的插入**
+
+注意：本方法有缺陷，我建议您使用插件！本方法需要手动添加行数！
 
 ```html
 <div class="MainCode">

@@ -33,7 +33,6 @@ git clone https://github.com/LiuDaiJun07/MarkLiu07Blog.git
 
 注意！此步骤修改后你需要修改所有`MarkLiu07Blog/Pages/`目录下的html文件！
 
-------------
 ### 3.简历的更改
 
 请使用Word文档书写您的简历，然后导出为PNG格式，随后前往以下目录：`MarkLiu07Blog/statics/Image/`
@@ -77,8 +76,6 @@ git clone https://github.com/LiuDaiJun07/MarkLiu07Blog.git
 	</pre>
 </div>
 ```
-
-------------
 
 ## 二、参观我的博客
 

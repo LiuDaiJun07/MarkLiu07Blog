@@ -80,7 +80,7 @@ git clone https://github.com/LiuDaiJun07/MarkLiu07Blog.git
 
 ## 二、参观我的博客
 
-如果你只是想单纯访问我的博客，请访问：[MarkLiu的博客](https://markliublog.tbit.top/ "MarkLiu的博客")
+如果你只是想单纯访问我的博客，请访问：[MarkLiu的博客](https://markblog.iaini.eu.cc/ "MarkLiu的博客")
 
 ## 三、其他
 
